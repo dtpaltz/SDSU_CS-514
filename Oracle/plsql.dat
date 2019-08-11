@@ -1,0 +1,41 @@
+> accept ann_sal prompt 'please enter an annual salary'
+> --% can use VARIABLE or VAR
+> --% this is a variation of plsql3.sql with more programming care
+> -- when a bind or subst. var. is used, the statement, if used recently
+> -- before, will be parsed and saved, and the parse step can be omitted
+> VARIABLE mo_sal VARCHAR2(10)
+> VAR mo NUMBER
+> VAR date2 DATE := '03-JAN-07'
+
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+NVARCHAR2 (n) | CLOB | NCLOB | REFCURSOR |
+BINARY_FLOAT | BINARY_DOUBLE ] ]
+
+> DECLARE
+  v_sal NUMBER(9,2):= &ann_sal;
+  v_date DATE := '03-JAN-07';
+BEGIN
+  :mo_sal:=TO_CHAR(v_sal/12,'99999.99');
+  :mo := v_sal   ;
+END;
+old:DECLARE
+  v_sal NUMBER(9,2):= &ann_sal;
+  v_date DATE := '03-JAN-07';
+BEGIN
+  :mo_sal:=TO_CHAR(v_sal/12,'99999.99');
+  :mo := v_sal   ;
+END;
+new:DECLARE
+  v_sal NUMBER(9,2):= 12000;
+  v_date DATE := '03-JAN-07';
+BEGIN
+  :mo_sal:=TO_CHAR(v_sal/12,'99999.99');
+  :mo := v_sal   ;
+END;
+anonymous block completed
+> PRINT mo_sal
+MO_SAL
+---------
+  1000.00
+
