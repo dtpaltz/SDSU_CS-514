@@ -1,0 +1,30 @@
+DROP TABLE newhires PURGE;
+CREATE TABLE newhires
+(
+empno VARCHAR2(5)PRIMARY KEY,
+ename VARCHAR2(10) NOT NULL,
+hiredate DATE
+);
+
+
+------------------------------
+
+SET SERVEROUTPUT ON
+CREATE OR REPLACE TRIGGER newEmpAddNewHire
+AFTER INSERT ON empbb02
+	FOR EACH ROW
+DECLARE
+BEGIN
+  INSERT INTO newhires VALUES (:NEW.empno, :NEW.ename, :NEW.hiredate);
+  DBMS_OUTPUT.PUT_LINE('1 row added to newhires table.');
+END;
+/
+
+
+------------------------------
+
+
+INSERT INTO empbb02 VALUES('810', 'lombardi', 'coach', '712', '01-FEB-15', 900000, 40, 4000);
+INSERT INTO empbb02 VALUES('820', 'marino', 'quarterback', '735', '11-MAR-15', 854000, 10, NULL);
+INSERT INTO empbb02 VALUES('830', 'tomlinson', 'running back', '735', '05-MAY-15', 748300, 10, 6000);
+

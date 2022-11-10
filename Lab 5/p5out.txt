@@ -1,0 +1,39 @@
+
+
+SQL> start lab5/p5/create_newhires
+DROP TABLE newhires PURGE
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+Table created.
+
+SQL> select * from newhires;
+
+no rows selected
+
+SQL> start lab5/p5/create_trigger
+
+Trigger created.
+
+SQL> start lab5/p5/insert_emps
+1 row added to newhires table.
+
+1 row created.
+
+1 row added to newhires table.
+
+1 row created.
+
+1 row added to newhires table.
+
+1 row created.
+
+SQL> select * from newhires;
+
+EMPNO ENAME      HIREDATE
+----- ---------- ---------
+810   lombardi   01-FEB-15
+820   marino     11-MAR-15
+830   tomlinson  05-MAY-15
+

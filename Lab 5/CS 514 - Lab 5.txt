@@ -1,0 +1,72 @@
+                       Lab 5   CS514    Spring 2015
+
+    NOTE:  do not work in teams!  If you are detected not doing
+      your own work, the penalty A-Rod gets will look like a slap
+      on the wrist.
+
+    NOTE:  use jdbc ONLY when told to use jdbc
+
+
+    1. For fun look up 'Mendoza line' in Wikipedia. Then write a java
+       program that will have as input an employee number, and
+       will output the following as appropriate:
+        employee with eid ddd has no batting average
+
+        employee with eid ddd has an average below the Mendoza line
+         (i.e. below 200)
+
+        employee with eid ddd has a batting average of nnn
+         (give the correct average)
+        Your java program should of course use jdbc to query the database.
+
+    2.  Write a stored procedure whose input is a player last name and
+      whose outputs are era and average.  Test it.  For null values, output
+      NA (first choice) or 0 (second choice).  Your tests should make sure
+      all the desired functionality is covered.
+      The output here should be self-documenting, e.g.
+       minoso has an era of 32 and an average of 270
+	   
+	   
+
+    3. Arrange to invoke the procedure you stored in 5. above from a java
+      jdbc program.
+	  
+	  
+	  
+	  
+	  
+
+    4. Assume you want to make a bunch of updates to the sal column of
+        empbb02.  You would use a PreparedStatement.
+
+        NOTE: by update we mean UPDATE, and not some other DML command.
+
+          Write a java jdbc program that will allow the user to do this task
+          from the keyboard as an application.  Test it.  Hand in the code
+          and the pragmatic proof that it works.
+
+          To save you a little time, the correct examples to look at are
+          probably jdbc7Ora.java and jdbc8Ora.java
+		  
+		  
+
+    5. Your immediate supervisor, who has an MBA and must be obeyed, imposes
+       the participation constraint that every new employee participate in
+       orientation. Add a table called newhires, with fields empno, ename,
+       hiredate. Write a trigger so that if you add an employee, he/she will
+       be placed in the newhires table.  Presumably, after attending
+       orientation, the new hire can be deleted from the hewhires table.
+
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   

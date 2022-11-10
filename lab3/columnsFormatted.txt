@@ -1,0 +1,29 @@
+
+column_name                    table_name
+------------------------------ ------------------------------
+"deptno",                     deptbb02
+"motto",                     deptbb02
+"location",                     deptbb02
+"restaurant",                     deptbb02
+"dname",                     deptbb02
+"sal",                     empbb02
+"hiredate",                     empbb02
+"boss",                     empbb02
+"pos",                     empbb02
+"ename",                     empbb02
+"empno",                     empbb02
+"deptno",                     empbb02
+"incentives",                     empbb02
+"empno",                     infobb02
+"fname",                     infobb02
+"nick",                     infobb02
+"uni",                     infobb02
+"average",                     infobb02
+"era",                     infobb02
+"grade",                     salsbb02
+"role",                     salsbb02
+"losal",                     salsbb02
+"hisal",                     salsbb02
+
+23 rows selected.
+

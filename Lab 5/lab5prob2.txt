@@ -1,0 +1,77 @@
+
+
+SELECT era, average FROM empbb02 NATURAL JOIN infobb02 WHERE ename = 'brown';
+
+
+
+---------------------------------------------
+
+
+
+CREATE OR REPLACE PROCEDURE PlayerAverages
+(
+  p_ename IN OUT VARCHAR2,
+  p_era OUT VARCHAR2,
+  p_average OUT VARCHAR2
+)
+AS 
+BEGIN
+  p_era := 'NA';
+  p_average := 'NA';
+  
+  IF p_ename IS NOT NULL THEN
+    SELECT TO_CHAR(era), TO_CHAR(average)
+    INTO p_era, p_average
+    FROM empbb02 NATURAL JOIN infobb02
+    WHERE ename = p_ename;
+  ELSE
+    p_ename := 'NA';
+  END IF;
+    
+  IF p_era IS NULL THEN
+    p_era := 'NA';
+  END IF;
+
+  IF p_average IS NULL THEN
+    p_average := 'NA';
+  END IF;
+END;
+
+
+
+----------------------------------------------------
+
+
+
+
+set serveroutput on
+DECLARE
+   ename VARCHAR2(20) := NULL;
+   era VARCHAR2(20);
+   average VARCHAR2(20);
+BEGIN
+   PLAYERAVERAGES(ename, era, average);
+   dbms_output.put_line('Player ' || ename  || ' has an era of ' || era || ' and an average of ' || average);
+   
+   ename := 'johnson';
+   PLAYERAVERAGES(ename, era, average);
+   dbms_output.put_line('Player ' || ename  || ' has an era of ' || era || ' and an average of ' || average);
+   
+   ename := 'bochy';
+   PLAYERAVERAGES(ename, era, average);
+   dbms_output.put_line('Player ' || ename  || ' has an era of ' || era || ' and an average of ' || average);
+   
+   ename := 'lasorda';
+   PLAYERAVERAGES(ename, era, average);
+   dbms_output.put_line('Player ' || ename  || ' has an era of ' || era || ' and an average of ' || average);
+END;
+/
+
+
+
+
+
+
+
+
+

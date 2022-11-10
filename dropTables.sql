@@ -1,0 +1,25 @@
+set echo off
+set termout off
+
+DROP TABLE empbb02 PURGE;
+DROP TABLE infobb02 PURGE;
+DROP TABLE deptbb02 PURGE;
+DROP TABLE salsbb02 PURGE;
+
+DROP TABLE empbb02 PURGE;
+DROP TABLE infobb02 PURGE;
+DROP TABLE deptbb02 PURGE;
+DROP TABLE salsbb02 PURGE;
+
+DROP TABLE empbb02 PURGE;
+DROP TABLE infobb02 PURGE;
+DROP TABLE deptbb02 PURGE;
+DROP TABLE salsbb02 PURGE;
+
+DROP TABLE empbb02 PURGE;
+DROP TABLE infobb02 PURGE;
+DROP TABLE deptbb02 PURGE;
+DROP TABLE salsbb02 PURGE;
+
+set echo on
+set termout on

@@ -1,0 +1,19 @@
+-- Lab 5
+-- Problem 2
+-- Output from creating and testing stored procedure
+
+SQL> start lab5/PlayerAverages
+
+Procedure created.
+
+SQL> start lab5/PlayerAveragesTest
+Player NA has an era of NA and an average of NA
+Player johnson has an era of 2.15 and an average of 123
+Player bochy has an era of NA and an average of 220
+Player lasorda has an era of NA and an average of NA
+
+PL/SQL procedure successfully completed.
+
+
+
+

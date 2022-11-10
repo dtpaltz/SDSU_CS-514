@@ -1,0 +1,159 @@
+Rohan is a Sun Oracle T4-2 running Solaris 10 at San Diego State University. 
+  Email Settings: http://www-rohan.sdsu.edu/mail/
+  Restore deleted files: http://rohan.sdsu.edu/file-recover.html 
+  Hourly and nightly snapshots of /home can be browsed by the goback command.
+
+The Library's 24/7 Study Area, WiFi, 48 PCs with Xwin32 and SSH, printing, 
+  open 24 hours.  http://scc.sdsu.edu/24-7.php | 619 594-3446
+
+The Student Computing Center (SCC), Helpdesk, WiFi, printing, 300 PCs 
+  with XWindows, and 36 Macs.  http://scc.sdsu.edu | 619 594-3189 
+
+WiFi and Smart Phone printing: email goprint@library.sdsu.edu to print.
+  Email and any attachments may be picked up at any Library Print Station.
+Rohan can print at the SCC and 24/7 Library Print Stations
+  "lp file" prints to the SCC, "lp -d 247 file" prints to the 24/7 Area.
+
+Software, manuals & tutorials: http://rohan.sdsu.edu/rohansoft.html
+X-Win32 student download: http://www-rohan.sdsu.edu/~download/xwin32.html
+
+Bash shell has been patched to 4.3.25(1) to fix a critical security hole.
+
+You have new mail.
+> sqlA
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Sat May 2 15:11:44 2015
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+
+USER
+------------------------------
+ST03
+
+SQL> spool lab5/p4Out.txt
+SQL> select empno, sal from empbb02;
+
+EMPNO        SAL
+----- ----------
+712        10000
+735         2000
+707         2000
+798         2000
+782        42000
+763        85000
+777        85000
+721        25000
+788        15000
+720       150000
+755        50000
+744        40000
+730       240000
+799        20000
+766       100000
+
+15 rows selected.
+
+SQL> quit
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+> cd lab5
+> javac Problem4.java
+> java Problem4
+Enter an employee number... (enter 0 to quit)
+744
+Enter a new salary for employee 744
+1
+1 rows updated.
+
+Enter an employee number... (enter 0 to quit)
+720
+Enter a new salary for employee 720
+2
+1 rows updated.
+
+Enter an employee number... (enter 0 to quit)
+730
+Enter a new salary for employee 730
+3
+1 rows updated.
+
+Enter an employee number... (enter 0 to quit)
+766
+Enter a new salary for employee 766
+4
+1 rows updated.
+
+Enter an employee number... (enter 0 to quit)
+777
+Enter a new salary for employee 777
+5
+1 rows updated.
+
+Enter an employee number... (enter 0 to quit)
+0
+Finished!
+> cd ..
+> sqlA
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Sat May 2 15:18:27 2015
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+
+USER
+------------------------------
+ST03
+
+SQL> select empno, sal from empbb02;
+
+EMPNO        SAL
+----- ----------
+712        10000
+735         2000
+707         2000
+798         2000
+782        42000
+763        85000
+777            5
+721        25000
+788        15000
+720            2
+755        50000
+744            1
+730            3
+799        20000
+766            4
+
+15 rows selected.
+
+SQL> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

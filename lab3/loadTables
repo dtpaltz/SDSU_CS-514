@@ -1,0 +1,9 @@
+
+sqlldr st213/cs514@cfedb.sdsu.edu control=loadsals.ctl
+
+sqlldr st213/cs514@cfedb.sdsu.edu control=loademp.ctl
+
+sqlldr st213/cs514@cfedb.sdsu.edu control=loadinfo.ctl
+
+sqlldr st213/cs514@cfedb.sdsu.edu control=loaddept.ctl
+

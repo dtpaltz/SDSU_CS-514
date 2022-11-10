@@ -1,0 +1,35 @@
+
+COLUMN_NAME                    TABLE_NAME
+------------------------------ ------------------------------
+deptno                         DEPTBB02
+motto                          DEPTBB02
+location                       DEPTBB02
+restaurant                     DEPTBB02
+dname                          DEPTBB02
+
+
+sal                            EMPBB02
+hiredate                       EMPBB02
+boss                           EMPBB02
+pos                            EMPBB02
+ename                          EMPBB02
+empno                          EMPBB02
+deptno                         EMPBB02
+incentives                     EMPBB02
+
+
+empno                          INFOBB02
+fname                          INFOBB02
+nick                           INFOBB02
+uni                            INFOBB02
+average                        INFOBB02
+era                            INFOBB02
+
+
+grade                          SALSBB02
+role                           SALSBB02
+losal                          SALSBB02
+hisal                          SALSBB02
+
+23 rows selected.
+
